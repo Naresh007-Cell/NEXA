@@ -1,3 +1,4 @@
+from config import MODEL
 from ollama import chat
 from brain.prompt import SYSTEM_PROMPT
 
@@ -5,7 +6,7 @@ from brain.prompt import SYSTEM_PROMPT
 def ask_nexa(messages):
 
     response = chat(
-        model="qwen3:4b",
+        model=MODEL,
         messages=[
             {
                 "role": "system",
